@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Analyze Data</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<header>
+    <h1>⚖️ Analyze Data</h1>
+    <button onclick="toggleDarkMode()">🌓 Toggle Theme</button>
+</header>
+
+<main class="main-layout">
+    <aside class="sidebar">
+        <h2>📝 Saved Months</h2>
+        <h3>Choose a Month:</h3>
+
+        <select id="analyzeMonthSelect">
+            <option value="2025-01">January 2025</option>
+            <option value="2025-02">February 2025</option>
+            <option value="2025-03">March 2025</option>
+            <option value="2025-04">April 2025</option>
+            <option value="2025-05">May 2025</option>
+            <option value="2025-06">June 2025</option>
+            <option value="2025-07">July 2025</option>
+            <option value="2025-08">August 2025</option>
+            <option value="2025-09">September 2025</option>
+            <option value="2025-10">October 2025</option>
+            <option value="2025-11">November 2025</option>
+            <option value="2025-12">December 2025</option>
+        </select>
+        <button id="compareAllBtn" class="btn-compare">Compare All Months</button>
+
+    </aside>
+
+    <canvas id="monthChart"></canvas>
+
+    <section class="content">
+        <div id="selectedMonthTitle"></div>
+        <div id="expensesDisplay"></div>
+        <canvas id="compareChart"></canvas>
+    </section>
+</main>
+
+<footer>
+    &copy; 2025 My Finance
+</footer>
+
+<script src="analyze.js"></script>
+</body>
+</html>

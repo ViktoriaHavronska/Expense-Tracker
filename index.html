@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<header>
+    <h1>💸 Expense Tracker</h1>
+    <button id="themeToggle">🌓 Toggle Theme</button>
+</header>
+
+<div class="main-layout">
+    <aside class="sidebar">
+        <h2>📊 Tools</h2>
+        <button onclick="window.location.href='analyze.html'">Analyze Data</button>
+        <h2>Select Month</h2>
+        <select id="monthSelect">
+            <option value="2025-01">January</option>
+            <option value="2025-02">February</option>
+            <option value="2025-03">March</option>
+            <option value="2025-04">April</option>
+            <option value="2025-05">May</option>
+            <option value="2025-06">June</option>
+            <option value="2025-07">July</option>
+            <option value="2025-08">August</option>
+            <option value="2025-09">September</option>
+            <option value="2025-10">October</option>
+            <option value="2025-11">November</option>
+            <option value="2025-12">December</option>
+        </select>
+    </aside>
+
+    <main class="content">
+        <section class="input-section">
+            <input type="number" id="expensesInput" placeholder="Enter amount (zł)"/>
+            <select id="expensesOptions">
+                <option value="" disabled selected>Select category</option>
+                <option value="Dormitory">Dormitory</option>
+                <option value="Meals">Meals</option>
+                <option value="Things">Things</option>
+                <option value="Other">Other</option>
+                <option value="ExtraLesson">Extra Lesson</option>
+            </select>
+            <button id="addBtn">Add Expense</button>
+            <button id="deleteBtn">Delete</button>
+        </section>
+
+        <section class="categories">
+            <div class="category">
+                <h3>Dormitory</h3>
+                <ul id="dormitoryColumn"></ul>
+                <p id="totalDormitory"></p>
+            </div>
+            <div class="category">
+                <h3>Meals</h3>
+                <ul id="mealsColumn"></ul>
+                <p id="totalMeals"></p>
+            </div>
+            <div class="category">
+                <h3>Things</h3>
+                <ul id="thingsColumn"></ul>
+                <p id="totalThings"></p>
+            </div>
+            <div class="category">
+                <h3>Other</h3>
+                <ul id="otherColumn"></ul>
+                <p id="totalOther"></p>
+            </div>
+            <div class="category">
+                <h3>Extra Lesson</h3>
+                <ul id="extraLessonColumn"></ul>
+                <p id="totalExtraLesson"></p>
+            </div>
+        </section>
+
+        <footer>
+            <h2 id="summaryExpenses">Summary: 0 zł</h2>
+        </footer>
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
